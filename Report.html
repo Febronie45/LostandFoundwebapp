@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>Report Item</title>
+
+    <link rel="stylesheet" href="styles/reportstyle.css">
+
+</head>
+
+<body>
+    <div class="navbar">
+        <h1>LOST & FOUND HUB</h1>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="#" target="_self">Report Item</a>
+            <a href="login.html" target="_blank">Login</a>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Report Item</h2>
+
+        <form onsubmit="return submitReport()">
+            <label>Full Name</label>
+            <input type="text" required>
+
+            <label>Email</label>
+            <input type="email" required placeholder="****@gmail.com">
+
+            <label>Item Name</label>
+            <input type="text" required>
+
+            <label>Description</label>
+            <textarea required></textarea>
+
+            <label>Location</label>
+            <input type="text" required placeholder="compound,class,restaurant,etc...">
+
+            <label>Date</label>
+            <input type="date" required>
+
+            <label>Type</label>
+            <select>
+                <option>Lost</option>
+                <option>Found</option>
+            </select>
+
+            <label>Upload Image</label>
+            <input type="file" onchange="previewImage(event)">
+
+            <img id="preview" width="200">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="javascript/script.js"></script>
+</body>
+
+</html>
